@@ -8,8 +8,10 @@ import avatar from '../assets/user.png'
 import './Timeline.css'
 
 export function Timeline() {
-    const tweetsStorage = JSON.parse(localStorage.getItem('@tweets'));
-    const initialTweets = Array.isArray(tweetsStorage) ? tweetsStorage : [];
+    const tweetsStorageeJSON: string | null = localStorage.getItem('@tweets');
+    const tweetsStorage: string[] = tweetsStorageeJSON ? JSON.parse(tweetsStorageeJSON) : null;
+    
+    const initialTweets: string[] = Array.isArray(tweetsStorage) ? tweetsStorage : [];
 
     const [newTweet, setNewTweet] = useState('') 
     const [tweets, setTweets] = useState(initialTweets)

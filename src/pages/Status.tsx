@@ -10,11 +10,13 @@ import avatar from '../assets/user.png'
 import './Status.css'
 
 export function Status(){
-    const answersStorage = JSON.parse(localStorage.getItem('@answers'))
-    const initialAnswers = Array.isArray(answersStorage) ? answersStorage : [];
+    const answersStorageJSON: string | null = localStorage.getItem('@answers');
+    const answersStorage: string[] = answersStorageJSON ? JSON.parse(answersStorageJSON) : null;
+    
+    const initialAnswers: string[] = Array.isArray(answersStorage) ? answersStorage : [];
 
     const [newAnswer, setNewAnswer] = useState('')
-    const [answers, setAnswers] = useState(initialAnswers)
+    const [answers, setAnswers] = useState<string[]>(initialAnswers)
 
     const params = useParams()
     const content = params.content
@@ -50,6 +52,8 @@ export function Status(){
           getData()
         }
       },[])
+
+
 
     
     return(

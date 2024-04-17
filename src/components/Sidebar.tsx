@@ -26,9 +26,11 @@ import './Sidebar.css'
 
 export function Sidebar() {
     const [modalIsOpen, setIsOpen] = React.useState(false);
+
+    const tweetsStorageeJSON: string | null = localStorage.getItem('@tweets');
+    const tweetsStorage: string[] = tweetsStorageeJSON ? JSON.parse(tweetsStorageeJSON) : null;
     
-    const tweetsStorage = JSON.parse(localStorage.getItem('@tweets'));
-    const initialTweets = Array.isArray(tweetsStorage) ? tweetsStorage : [];
+    const initialTweets: string[] = Array.isArray(tweetsStorage) ? tweetsStorage : [];
 
     const [newTweet, setNewTweet] = useState('') 
     const [tweets, setTweets] = useState(initialTweets)
@@ -50,7 +52,7 @@ export function Sidebar() {
       closeModal()
     }
 
-    function handleHotKeySubmit(e :  KeyboardEvent) {
+    function handleHotKeySubmit(e: { key: string; ctrlKey: any; metaKey: any; }) {
         if(e.key === 'Enter' && (e.ctrlKey || e.metaKey)){
           if(newTweet === '' ){
             alert('Escreva um tweet!')

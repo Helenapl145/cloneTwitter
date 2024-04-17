@@ -1,5 +1,5 @@
 import { MagnifyingGlass } from "phosphor-react";
-import { ReactNode, useState } from "react";
+import { ReactNode, SetStateAction, useState } from "react";
 
 import { ForYou } from "./ForYou";
 import { Trending } from "./Trending";
@@ -15,7 +15,7 @@ export function Search(){
       setContent(contentComponent);
     };
 
-    const handleItemClick = (item) => {
+    const handleItemClick = (item: SetStateAction<string>) => {
         setSelectedItem(item);
       };
     
