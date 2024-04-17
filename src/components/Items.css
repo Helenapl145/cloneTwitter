@@ -1,0 +1,31 @@
+.wrapperItems{
+    border: none;
+    background-color: transparent;
+    padding: 0.5rem;
+    text-align: left;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapperItems:hover{
+    background-color: #f5f4f4;
+}
+
+.wrapperItems p{
+    margin: 0;
+    font-size: .8rem;
+    color: rgba(49, 49, 49, 0.822);
+}
+
+.wrapperItems svg{
+    font-size: 2rem;
+    border-radius: 999px;
+}
+
+.wrapperItems svg:hover{
+    background-color: #acd3ee71;
+    color: #1da1f2;
+}
+
