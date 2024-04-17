@@ -35,7 +35,7 @@ O projeto consiste na criação de um clone do Twitter(X) utilizando React com o
 
 O projeto consiste na criação de um clone do Twitter utilizando React sem banco de dados, por isso não tem todas as funcionalidades do Twitter(x). O principal objetivo é aprimorar minhas habilidades em React e também criar uma aplicação realista com alguma funcionalidades como:
 
-- [Visite o projeto online]()
+- [Visite o projeto online](https://clone-twitter-6rof.vercel.app/)
 
 Esse projeto está sob a licença MIT.
 
